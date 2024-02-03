@@ -7,9 +7,10 @@ A BMP file has been accidentally xor-encrypted and we don't know the key nor the
 
 To understand how to proceed, you must first know the architecture of the bmp file.
 
-![Bits to Bitmaps: A simple walkthrough of BMP Image Format | by Uday  Hiwarale | System Failure | Medium](https://miro.medium.com/v2/resize:fit:1400/1*2ohsW8Chn2QsTcSyVcTZcw.png)
+![image](https://github.com/loupmesquita/CryptographyChallenges/assets/57537562/f4919b9c-5066-430e-9f70-88c73796285c)
 
-![BMP Header open in Hex Editor | Download Scientific Diagram](https://www.researchgate.net/publication/319105105/figure/fig2/AS:527239752421376@1502715160714/BMP-Header-open-in-Hex-Editor.png)
+![image](https://github.com/loupmesquita/CryptographyChallenges/assets/57537562/bbf627c0-1dae-4599-9682-08e11ebde1e2)
+
 
 I used Kasiski's method to get an idea of the size of the key and thank to that you can guess that the key size is 6 bytes.
 
