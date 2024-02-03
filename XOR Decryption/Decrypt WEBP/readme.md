@@ -8,36 +8,14 @@ A WEBP file has been accidentally xor-encrypted and we don't know the key nor th
 To understand how to proceed, you must first know the architecture of the WEBP file. And in particular the header
 
 
-0                   1                   2                   3
+![image](https://github.com/loupmesquita/CryptographyChallenges/assets/57537562/7cfcaf17-7fc4-47d4-8e12-e577eb82ce0e)
 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|      'R'      |      'I'      |      'F'      |      'F'      |
-
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|                           File Size                           |
-
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|      'W'      |      'E'      |      'B'      |      'P'      |
-
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 
 <br> 
 
- 0                   1                   2                   3<br> 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1<br> 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+<br> 
-|                                                               |<br> 
-|                    WebP file header (12 bytes)                |<br> 
-|                                                               |<br> 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+<br> 
-:                        'VP8 ' Chunk                           :<br> 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+<br> 
+![image](https://github.com/loupmesquita/CryptographyChallenges/assets/57537562/9aad99c5-b623-4946-9290-afe7dc42517b)
+
 <br> 
 
 I used Kasiski's method to get an idea of the size of the key and thank to that you can guess that the key size is 15 bytes.
